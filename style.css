@@ -1,61 +1,102 @@
-/* INSTRUCTIONS
- *
- * 1) Keep the text inside .intro-content
- *    in the same place, but have the background
- *    extend from one side of the viewport
- *    to the other, no matter how wide or narrow
- *    the browser is.
- *
- * 2) Limit the maximum width of the text in the
- *    bottom area.
- *
- * You may modify the HTML if needed
- * (you probably should for this challenge)
- *
- */
+/* 
+////// For this challenge ///////
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+- You will have to modify the HTML
 
-* {
+- You can add new classes in the HTML
+  if you need to
+
+// Requirements
+1. The headings in the first row must be
+   a different color
+2. The two .col at the bottom must go next
+   to one another
+3. The section at the bottom should have
+   a dark background color and a different
+   color of text
+4. I've removed the "gap" that I created,
+   so you'll have to add it back in
+
+   */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
+  margin: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 21px;
+  font-size: 1.3rem;
 }
-.content {
-  background-color: #23424a;
-  color: white;
-  padding: 100px 0;
+
+h1 {
+  font-size: 3rem;
 }
 
 .container {
   width: 80%;
-  margin: 0 auto;
   max-width: 1100px;
+  margin: 0 auto;
 }
 
-.content-text {
+.row,
+.row-2 {
+  /* display: flex => flex container */
+  display: flex;
+
+  /* can't use yet */
+  /* gap: 100px; */
+}
+
+.row-2 {
+  background-color: #136c72;
+  color: white;
+}
+
+.col {
+  /* these are now flex items */
+  width: 100%;
+  text-align: center;
+}
+
+.col h2 {
+  color: #87629a;
+}
+
+.col-2 {
+  width: 100%;
+  text-align: center;
+  margin-left: 30px;
+}
+
+.hero {
+  padding: 100px 0;
+  background-color: #23424a;
+  color: #fff;
+}
+
+.hero__text {
   width: 60%;
 }
 
-h1 {
-  font-size: 48px;
-  margin-bottom: 1em;
-}
-
-.content p {
+.hero p {
   margin-bottom: 3em;
 }
 
-button {
+.btn {
   display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #23424a;
+  font-weight: 900;
   background-color: #38cfd9;
   padding: 0.75em 2em;
   border-radius: 100px;
-  color: #23424a;
-  font-weight: 900;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.75;
 }
