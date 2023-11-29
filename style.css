@@ -59,16 +59,21 @@ h1 {
   /* these are now flex items */
   width: 100%;
   text-align: center;
+  margin-left: 30px;
 }
 
-.col h2 {
+.col-3 {
+  padding: 3em 0;
+}
+
+.col-3 h2 {
   color: #87629a;
 }
 
 .col-2 {
-  width: 100%;
-  text-align: center;
-  margin-left: 30px;
+  background-color: #136c72;
+  color: white;
+  padding: 3em 0;
 }
 
 .hero {
