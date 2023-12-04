@@ -1,23 +1,16 @@
 /* 
 ////// For this challenge ///////
 
-- You will have to modify the HTML
-
-- You can add new classes in the HTML
-  if you need to
+- All text is in the text.md file
 
 // Requirements
-1. The headings in the first row must be
-   a different color
-2. The two .col at the bottom must go next
-   to one another
-3. The section at the bottom should have
-   a dark background color and a different
-   color of text
-4. I've removed the "gap" that I created,
-   so you'll have to add it back in
+1. Refer to the design specs for the
+   overall layout 
+2. The image should line up with
+   the sidebar in the section
+   below
 
-   */
+*/
 
 *,
 *::before,
@@ -31,8 +24,13 @@ body {
   font-size: 1.3rem;
 }
 
+img {
+  max-width: 100%;
+}
+
 h1 {
   font-size: 3rem;
+  margin-top: 0;
 }
 
 .container {
@@ -41,39 +39,23 @@ h1 {
   margin: 0 auto;
 }
 
-.row,
-.row-2 {
+.row {
   /* display: flex => flex container */
   display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
 
   /* can't use yet */
   /* gap: 100px; */
 }
 
-.row-2 {
-  background-color: #136c72;
-  color: white;
-}
-
 .col {
   /* these are now flex items */
   width: 100%;
-  text-align: center;
+}
+
+.col + .col {
   margin-left: 30px;
-}
-
-.col-3 {
-  padding: 3em 0;
-}
-
-.col-3 h2 {
-  color: #87629a;
-}
-
-.col-2 {
-  background-color: #136c72;
-  color: white;
-  padding: 3em 0;
 }
 
 .hero {
@@ -83,7 +65,12 @@ h1 {
 }
 
 .hero__text {
-  width: 60%;
+  width: 62%;
+}
+
+.hero__img {
+  width: 32%;
+  align-self: flex-start;
 }
 
 .hero p {
@@ -104,4 +91,9 @@ h1 {
 .btn:hover,
 .btn:focus {
   opacity: 0.75;
+}
+
+.col-right {
+  background-color: #136c72;
+  color: #fff;
 }
