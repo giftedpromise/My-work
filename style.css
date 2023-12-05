@@ -96,4 +96,9 @@ h1 {
 .col-right {
   background-color: #136c72;
   color: #fff;
+  text-align: center;
+}
+
+.col-left h1 {
+  color: #38cfd9;
 }
