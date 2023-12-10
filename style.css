@@ -97,8 +97,13 @@ h1 {
   background-color: #136c72;
   color: #fff;
   text-align: center;
+  width: 32%;
 }
 
 .col-left h1 {
   color: #38cfd9;
+}
+
+.col-left {
+  width: 62%;
 }
